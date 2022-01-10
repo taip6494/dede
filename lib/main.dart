@@ -16,6 +16,7 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
+  var leftDiceNumber = 5;
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
@@ -25,30 +26,30 @@ class DicePage extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: TextButton (
+              child: TextButton(
+                onPressed: () {},
                 child: Image.asset(
-                  'images/dice1.png',
+                  'images/dice$leftDiceNumber.png',
                   width: deviceWidth * 0.42,
                   height: deviceHeight * 0.42,
                 ),
-                onPressed: () {},
               ),
             ),
-            Text("  "),
             Expanded(
-              child: TextButton (
+              child: TextButton(
+                onPressed: () {},
                 child: Image.asset(
-                  'images/dice2.png',
+                  'images/dice$leftDiceNumber.png',
                   width: deviceWidth * 0.42,
                   height: deviceHeight * 0.42,
                 ),
-                onPressed: () {},
               ),
-              ),
-
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
