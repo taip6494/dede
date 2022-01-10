@@ -25,17 +25,28 @@ class DicePage extends StatelessWidget {
       child: Center(
         child: Row(
           children: [
-            Image.asset(
-              'images/dice1.png',
-              width: deviceWidth * 0.42,
-              height: deviceHeight * 0.42,
+            Expanded(
+              child: TextButton (
+                child: Image.asset(
+                  'images/dice1.png',
+                  width: deviceWidth * 0.42,
+                  height: deviceHeight * 0.42,
+                ),
+                onPressed: () {},
+              ),
             ),
             Text("  "),
-            Image.asset(
-              'images/dice2.png',
-              width: deviceWidth * 0.42,
-              height: deviceHeight * 0.42,
-            ),
+            Expanded(
+              child: TextButton (
+                child: Image.asset(
+                  'images/dice2.png',
+                  width: deviceWidth * 0.42,
+                  height: deviceHeight * 0.42,
+                ),
+                onPressed: () {},
+              ),
+              ),
+
           ],
         ),
       ),
