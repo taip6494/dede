@@ -16,28 +16,29 @@ void main() {
 }
 
 class DicePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
-        padding: EdgeInsets.fromLTRB(27, 20, 27, 0),
-        child: Row(children: [
-          Image.asset(
-            'images/dice1.png',
-            width: deviceWidth *0.42,
-            height: deviceHeight*0.42,
-
-          ),
-          Text(
-            "  "
-          ),
-          Image.asset(
-            'images/dice2.png',
-            width: deviceWidth *0.42,
-            height: deviceHeight*0.42,
-          ),
-        ]));
+      padding: EdgeInsets.fromLTRB(27, 20, 27, 0),
+      child: Center(
+        child: Row(
+          children: [
+            Image.asset(
+              'images/dice1.png',
+              width: deviceWidth * 0.42,
+              height: deviceHeight * 0.42,
+            ),
+            Text("  "),
+            Image.asset(
+              'images/dice2.png',
+              width: deviceWidth * 0.42,
+              height: deviceHeight * 0.42,
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
