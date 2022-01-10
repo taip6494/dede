@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -9,14 +10,29 @@ void main() {
           title: Text('Dédé'),
           backgroundColor: Colors.red,
         ),
-        body: DicePage(),
+        body: DiceState(),
       ),
     ),
   );
 }
+class DiceState extends StatefulWidget{
+  @override
+  DicePage createState() => DicePage();
+}
 
-class DicePage extends StatelessWidget {
-  var leftDiceNumber = 5;
+
+class DicePage extends State<DiceState> {
+
+  int leftDiceNumber = 5;
+  int rightDiceNumber = 4;
+  void OnClicked(){
+    setState((){
+      var random = new Random();
+      leftDiceNumber = random.nextInt(6) +1;
+      rightDiceNumber = random.nextInt(6) +1;
+    },);
+  }
+
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
@@ -27,7 +43,9 @@ class DicePage extends StatelessWidget {
           children: [
             Expanded(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  OnClicked();
+                },
                 child: Image.asset(
                   'images/dice$leftDiceNumber.png',
                   width: deviceWidth * 0.42,
@@ -37,9 +55,11 @@ class DicePage extends StatelessWidget {
             ),
             Expanded(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  OnClicked();
+                },
                 child: Image.asset(
-                  'images/dice$leftDiceNumber.png',
+                  'images/dice$rightDiceNumber.png',
                   width: deviceWidth * 0.42,
                   height: deviceHeight * 0.42,
                 ),
@@ -50,6 +70,5 @@ class DicePage extends StatelessWidget {
       ),
     );
   }
+
 }
-
-
