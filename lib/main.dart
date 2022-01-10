@@ -21,7 +21,6 @@ class DicePage extends StatelessWidget {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
     return Container(
-      padding: EdgeInsets.fromLTRB(27, 20, 27, 0),
       child: Center(
         child: Row(
           children: [
