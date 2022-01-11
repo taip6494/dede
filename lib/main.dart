@@ -10,18 +10,18 @@ void main() {
           title: Text('Dédé'),
           backgroundColor: Colors.red,
         ),
-        body: DiceState(),
+        body: DicePage(),
       ),
     ),
   );
 }
-class DiceState extends StatefulWidget{
+class DicePage extends StatefulWidget{
   @override
-  DicePage createState() => DicePage();
+  DiceState createState() => DiceState();
 }
 
 
-class DicePage extends State<DiceState> {
+class DiceState extends State<DicePage> {
 
   int leftDiceNumber = 5;
   int rightDiceNumber = 4;
