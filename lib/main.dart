@@ -15,6 +15,7 @@ void main() {
     ),
   );
 }
+//StateFulWidget créaation page dynamique
 class DicePage extends StatefulWidget{
   @override
   DiceState createState() => DiceState();
